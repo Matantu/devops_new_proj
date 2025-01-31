@@ -1,0 +1,9 @@
+name: CI Test  # This name will appear in Branch Protection Rules
+on: [push, pull_request]  # Runs on push or pull request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Tests
+        run: echo "Running CI tests..."
